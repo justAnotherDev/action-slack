@@ -19,6 +19,7 @@ const messageSingleton = (() => {
     const message = {};
 
     message.text = getMessage(); // Args || DEFAULT_MESSAGE
+    message.link_names = linkNames(); // Tag included usernames/channels/groups in the message
 
     // override username
     if (SLACK_USERNAME) message.username = SLACK_USERNAME;

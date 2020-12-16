@@ -8,6 +8,7 @@ const {
   SLACK_AVATAR,
   SLACK_EMOJI,
   SLACK_CUSTOM_PAYLOAD,
+  SLACK_LINK_NAMES,
   GITHUB_EVENT_PATH,
   GITHUB_ACTOR,
   GITHUB_EVENT_NAME,
@@ -45,3 +46,7 @@ exports.selectAvatar = () => {
 exports.emoji = () => {
   return SLACK_EMOJI ? `:${SLACK_EMOJI}:` : null
 };
+
+exports.linkNames = () => {
+  return SLACK_LINK_NAMES == 'true' || false
+}
